@@ -59,4 +59,56 @@ export const phrases: PhraseObjectType[] = [
     phraseType: 'fact',
     tags: ['space', 'sun', 'moon'],
   },
+  {
+    text: 'Never argue with stupid people, they will drag you down to their level and beat you with experience.',
+    phraseType: 'quote',
+    tags: ['humor'],
+    author: 'Mark Twain',
+  },
+  {
+    text: 'Kindness is the language which the deaf can hear and the blind can see.',
+    phraseType: 'quote',
+    tags: ['kindness'],
+    author: 'Mark Twain',
+  },
+  {
+    text: 'The only way to do great work is to love what you do.',
+    phraseType: 'quote',
+    tags: ['inspiration', 'work'],
+    author: 'Steve Jobs',
+  },
+  {
+    text: 'Honesty is the first chapter in the book of wisdom.',
+    phraseType: 'quote',
+    tags: ['wisdom', 'honesty'],
+    author: 'Thomas Jefferson',
+  },
+  {
+    phraseType: 'verse',
+    text: 'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.',
+    source: 'John 3:16',
+    tags: ['salvation', 'eternal life'],
+  },
+  {
+    phraseType: 'verse',
+    text: 'For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.',
+    source: 'Jeremiah 29:11',
+    tags: ['hope', 'future'],
+  },
+  {
+    phraseType: 'fact',
+    text: 'The average person spends 6 months of their lifetime waiting on a red light to turn green.',
+    tags: ['time', 'waiting'],
+  },
+  {
+    phraseType: 'verse',
+    source: 'Joshuah 1:9',
+    text: 'Have I not commanded you be strong and courageous. Do not be terrified; do not be discouraged, for the Lord your God will be with you wherever you go.',
+    tags: ['courage', 'strength'],
+  },
+  {
+    phraseType: 'fact',
+    text: 'Turtles can breathe through their butts.',
+    tags: ['animals', 'turtles'],
+  },
 ];

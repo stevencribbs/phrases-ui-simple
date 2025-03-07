@@ -7,11 +7,23 @@ interface PhraseProps {
   index?: number
 }
 
+const getFooter = (phrase: PhraseObjectType): string => {
+  switch(phrase.phraseType) {
+    case 'quote':
+      return phrase.author ? `Author: ${phrase.author}` : '';
+    case 'verse':
+      return phrase.source ? `Source: ${phrase.source}` : '';
+    case 'fact':
+    default:
+      return '';
+  }
+};
+
 const Phrase = ({phrase, index=0}: PhraseProps) => {
-  const footerText = phrase.source ? `Source: ${phrase.source}` : `Author: ${phrase.author}`;
+  const footerText = getFooter(phrase);
   return (
     <Card key={index} style={{ margin: '10px'}}>
-      <Card.Header className='text-muted'>{capitalizeString(phrase.phraseType)}</Card.Header>
+      <Card.Header className='text-white bg-primary'>{capitalizeString(phrase.phraseType)}</Card.Header>
       <Card.Body>
         <Card.Text>{phrase.text}</Card.Text>
       </Card.Body>

@@ -6,11 +6,11 @@ interface PhraseListProps {
 }
 
 const PhraseList = ({ phrases }: PhraseListProps) => {
-  const sortedPhrases = [...phrases].sort((a, b) => a.text.localeCompare(b.text));
+  // const sortedPhrases = [...phrases].sort((a, b) => a.text.localeCompare(b.text));
 
   return (
     <div>
-      {sortedPhrases.map((phrase, index) => (
+      {phrases.map((phrase, index) => (
         <Phrase phrase={phrase} index={index} />
       ))}
     </div>
