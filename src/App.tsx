@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/header/Header'
-import PhraseList from './components/phraseList/PhraseList';
 import { phrases } from './constants';
-import { getPhrasesByType } from './utlities';
+import { List } from './pages/List';
+import Summary from './pages/summary';
 
 function App() {
   const [page, setPage] = useState('all');
@@ -12,38 +12,25 @@ function App() {
     setPage(page);
   };
 
-  const renderPhraseList = () => {
-    console.log('page:', page);
+  const renderPage = () => {
     switch(page) {
-      case 'quotes': {
-        const quotePhrases = getPhrasesByType(phrases, 'quote');
-        console.log('quotePhrases:', quotePhrases);
-        return (<PhraseList phrases={quotePhrases} />);
+      case 'phrases': {
+        return (<List />);
       }
-      case 'facts': {
-        const factPhrases = getPhrasesByType(phrases, 'fact');
-        console.log('factPhrases:', factPhrases);
-        return (<PhraseList phrases={factPhrases} />);
-      }
-      case 'verses': {
-        const versesPhrases = getPhrasesByType(phrases, 'verse');
-        console.log('versesPhrases:', versesPhrases);
-        return (<PhraseList phrases={versesPhrases} />);
-      }
-      case 'all':
+      case 'home':
       default:
-        return (<PhraseList phrases={phrases} />);
+        return (<Summary phrases={phrases} />);
     }
   };
 
   return (
     <>
-      <Header title="What Is Your Phrase?"
-        menuItems={['all', 'quotes', 'facts', 'verses',]} 
+      <Header title="Welcome to Phrases"
+        menuItems={['home', 'phrases']} 
         menuClick={handlePageChange} 
         selected={page} 
       />
-     {renderPhraseList()} 
+      {renderPage()}
     </>
   )
 }
