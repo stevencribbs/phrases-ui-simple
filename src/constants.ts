@@ -111,4 +111,10 @@ export const phrases: PhraseObjectType[] = [
     text: 'Turtles can breathe through their butts.',
     tags: ['animals', 'turtles'],
   },
+  {
+    category: 'verse',
+    text: 'The Lord is my light and my salvation; whom shall I fear? The Lord is the stronghold of my life; of whom shall I be afraid?',
+    source: 'Psalm 27:1',
+    tags: ['fear', 'salvation'],
+  },
 ];
